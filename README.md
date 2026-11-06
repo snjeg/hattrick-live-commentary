@@ -1,5 +1,7 @@
 # Hattrick Live Commentary
 
+[![CI](https://github.com/snjeg/hattrick-live-commentary/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/snjeg/hattrick-live-commentary/actions/workflows/ci.yml)
+
 A Chrome extension that turns a live Hattrick match into a spoken broadcast: two commentators (play-by-play and analyst), stadium atmosphere, weather ambience, and background talk that fills the gaps between events.
 
 Status: pre-MVP. Read `CLAUDE.md` first, then `docs/roadmap.md` and `docs/backlog.md`.
