@@ -66,12 +66,29 @@
           <ObjectPlayerID>0</ObjectPlayerID>
           <EventKey>not-a-key</EventKey>
           <MatchPart>2</MatchPart>
-          <EventText>Unreadable key: skipped with a warning.</EventText>
+          <EventText>Unreadable key: kept and logged.</EventText>
+        </Event>
+        <Event Index="7">
+          <Minute>61</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>999_1</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>An event type that is not in the official table.</EventText>
+        </Event>
+        <Event Index="8">
+          <Minute>62</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>45_1</EventKey>
+          <EventText>No match part: cannot be placed, so it is skipped with a warning.</EventText>
         </Event>
       </EventList>
       <HomeGoals>1</HomeGoals>
       <AwayGoals>0</AwayGoals>
-      <LastShownEventIndex>6</LastShownEventIndex>
+      <LastShownEventIndex>8</LastShownEventIndex>
     </Match>
     <Match>
       <SourceSystem>Hattrick</SourceSystem>

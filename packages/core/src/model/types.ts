@@ -118,6 +118,13 @@ export type EventGroup =
   | 'stats'
   | 'unknown';
 
+/**
+ * Coarse class of an event (docs/chpp-event-types.md): a goal (1xx, shoot-out kick scored), a chance
+ * without a goal (2xx, shoot-out kick missed), a card, match info (flow, injuries, changes, tactics),
+ * or background context for the analyst (pre-match, venue, stakes, stories, form, quotes).
+ */
+export type EventCategory = 'goal' | 'chance' | 'card' | 'info' | 'context';
+
 export interface MatchEvent {
   /** CHPP event index. Has gaps; may start at 0 or 1. */
   index: number;
@@ -129,6 +136,9 @@ export interface MatchEvent {
   typeId: number;
   variant: number;
   group: EventGroup;
+  category: EventCategory;
+  /** Type ID is in the official event-type table. */
+  known: boolean;
   /** Team the event belongs to, when it could be resolved. */
   side?: Side;
   /** Unsupported CHPP ID fields, kept raw (0 is dropped). Do not rely on them. */

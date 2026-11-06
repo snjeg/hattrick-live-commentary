@@ -1,11 +1,12 @@
 import { runningScore, shootoutScore, type Match, type MatchEvent } from '@hlc/core';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import realXml from '../../../../fixtures/real/live-viewall-livetexts.xml?raw';
 import reportXml from '../../../../fixtures/samples/live-viewall-reporttexts.synthetic.xml?raw';
 import inProgressXml from '../../../../fixtures/samples/live-viewnew-inprogress.synthetic.xml?raw';
-import { parseLive } from './live';
+import { parseLive, type UnknownEventKey } from './live';
 
-const real = parseLive(realXml);
+const realLog: UnknownEventKey[] = [];
+const real = parseLive(realXml, { logUnknownKey: (e) => realLog.push(e) });
 const [canada, cacio] = real.matches as [Match, Match];
 
 function byKey(match: Match, key: string, nth = 0): MatchEvent {
@@ -15,6 +16,42 @@ function byKey(match: Match, key: string, nth = 0): MatchEvent {
 }
 
 describe('live 2.3, live-texts mode (real fixture)', () => {
+  it('classifies every event as goal, chance, card, info or context', () => {
+    const cat = (m: Match, key: string) => byKey(m, key).category;
+    expect(cat(canada, '121_1')).toBe('goal');
+    expect(cat(canada, '162_2')).toBe('goal');
+    expect(cat(canada, '219_1')).toBe('chance');
+    expect(cat(canada, '273_1')).toBe('chance');
+    expect(cat(canada, '510_2')).toBe('card');
+    expect(cat(cacio, '511_2')).toBe('card');
+    expect(cat(canada, '56_2')).toBe('goal'); // shoot-out kick scored
+    expect(cat(canada, '58_3')).toBe('chance'); // shoot-out kick missed
+    expect(cat(canada, '45_1')).toBe('info');
+    expect(cat(cacio, '401_2')).toBe('info');
+    expect(cat(cacio, '75_4')).toBe('info');
+    expect(cat(cacio, '25_5')).toBe('context');
+    expect(cat(cacio, '811_3')).toBe('context');
+    expect(cat(cacio, '804_3')).toBe('context');
+    expect(cat(cacio, '32_2')).toBe('context');
+    expect(cat(cacio, '703_2')).toBe('context');
+  });
+
+  it('knows every real key except the undocumented 550, which it logs instead of failing', () => {
+    const unknown = real.matches.flatMap((m) => m.events).filter((e) => !e.known);
+    expect(unknown.map((e) => e.key)).toEqual(['550_2', '550_1']);
+    expect(real.unknownKeys).toEqual([
+      {
+        typeId: 550,
+        keys: ['550_2', '550_1'],
+        count: 2,
+        matchId: 767604296,
+        index: 32,
+        sampleText: '',
+      },
+    ]);
+    expect(realLog).toEqual(real.unknownKeys);
+  });
+
   it('reads the response header and both matches', () => {
     expect(real.version).toBe('2.3');
     expect(real.fetchedDate).toBe('2026-11-06T15:15:28');
@@ -188,11 +225,19 @@ describe('live 2.3, live-texts mode (real fixture)', () => {
 });
 
 describe('live 2.3, report mode (synthetic sample)', () => {
-  const report = parseLive(reportXml);
+  const reportLog: UnknownEventKey[] = [];
+  const report = parseLive(reportXml, { logUnknownKey: (e) => reportLog.push(e) });
   const [played, upcoming] = report.matches as [Match, Match];
 
   it('handles empty, self-closing and plain report texts', () => {
-    expect(played.events.map((e) => e.key)).toEqual(['598_1', '121_1', '332_1', '45_1']);
+    expect(played.events.map((e) => e.key)).toEqual([
+      '598_1',
+      '121_1',
+      '332_1',
+      '45_1',
+      'not-a-key',
+      '999_1',
+    ]);
     expect(played.events[0]?.beats).toEqual([]);
     expect(played.events[2]?.beats).toEqual([]);
     expect(played.events[1]?.beats).toEqual([
@@ -204,15 +249,59 @@ describe('live 2.3, report mode (synthetic sample)', () => {
     expect(played.events[3]?.beats[0]?.text).toBe('Half time. 1 – 0.');
   });
 
-  it('warns about and skips unreadable events', () => {
-    expect(report.warnings).toHaveLength(1);
-    expect(report.warnings[0]).toContain('not-a-key');
+  it('keeps events with unknown or unreadable keys and logs each with a sample text', () => {
+    const unreadable = played.events.find((e) => e.key === 'not-a-key');
+    expect(unreadable).toMatchObject({
+      typeId: 0,
+      group: 'unknown',
+      category: 'info',
+      known: false,
+    });
+    expect(unreadable?.beats[0]?.text).toBe('Unreadable key: kept and logged.');
+    expect(played.events.find((e) => e.key === '999_1')).toMatchObject({
+      known: false,
+      category: 'info',
+    });
+    expect(report.unknownKeys).toEqual([
+      {
+        keys: ['not-a-key'],
+        count: 1,
+        matchId: 1000001,
+        index: 6,
+        sampleText: 'Unreadable key: kept and logged.',
+      },
+      {
+        typeId: 999,
+        keys: ['999_1'],
+        count: 1,
+        matchId: 1000001,
+        index: 7,
+        sampleText: 'An event type that is not in the official table.',
+      },
+    ]);
+    expect(reportLog).toEqual(report.unknownKeys);
+  });
+
+  it('skips only events it cannot place in the match, with a warning and sample text', () => {
+    expect(report.warnings).toEqual([
+      'Skipped event 8 (key "45_1", minute 62, part undefined): "No match part: cannot be placed, so it is skipped with a warning."',
+    ]);
   });
 
   it('accepts teams without lineups and upcoming matches with an empty event list', () => {
     expect(played.home.lineup).toEqual([]);
     expect(upcoming.events).toEqual([]);
     expect(upcoming.spoilers).toEqual({});
+  });
+
+  it('logs to console.warn by default', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined);
+    parseLive(reportXml);
+    expect(warn).toHaveBeenCalledTimes(2);
+    expect(warn.mock.calls[1]?.[0]).toBe(
+      '[chpp] Unknown event key 999_1 (x1, match 1000001 index 7): "An event type that is not in the official table."',
+    );
+    warn.mockRestore();
   });
 });
 

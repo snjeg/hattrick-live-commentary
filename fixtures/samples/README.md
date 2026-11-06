@@ -4,6 +4,6 @@ Hand-written XML for parser tests where no real fixture exists yet. **Every file
 
 | File | Imitates | Why synthetic |
 | --- | --- | --- |
-| `live-viewall-reporttexts.synthetic.xml` | `live` 2.3 `viewAll` with `useLiveEventsAndTexts=false` (report-style texts, many empty) | No report-mode fixture captured yet |
+| `live-viewall-reporttexts.synthetic.xml` | `live` 2.3 `viewAll` with `useLiveEventsAndTexts=false` (report-style texts, many empty), plus an unreadable key, an undocumented type and an event without a match part | No report-mode fixture captured yet |
 | `live-viewnew-inprogress.synthetic.xml` | `live` 2.3 response for a match in progress, with `NextEventMinute`/`NextEventMatchPart` | Real fixture only has finished matches; element position assumed (see `docs/open-questions.md`) |
 | `matchdetails.synthetic.xml` | `matchdetails` 3.1 with `Arena > WeatherID` and `AddedMinutes` only | No matchdetails fixture yet |

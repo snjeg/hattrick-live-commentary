@@ -1,7 +1,7 @@
 import {
   addedMinutesFromText,
   decodeFormation,
-  eventGroup,
+  classifyEventType,
   isMatchPart,
   parseEventKey,
   venueWeather,
@@ -27,8 +27,37 @@ export interface LiveResponse {
   /** CHPP FetchedDate as ISO-like local time. */
   fetchedDate?: string;
   matches: Match[];
-  /** Non-fatal problems, e.g. events skipped for an unreadable key. */
+  /** Non-fatal problems, e.g. events skipped for a missing minute or match part. */
   warnings: string[];
+  /** Event keys not in docs/chpp-event-types.md (or unreadable), one entry per type, with a sample. */
+  unknownKeys: UnknownEventKey[];
+}
+
+export interface UnknownEventKey {
+  /** Type ID, or undefined when the key itself could not be read. */
+  typeId?: number;
+  /** Every raw EventKey seen for this type, e.g. ["550_2", "550_1"]. */
+  keys: string[];
+  count: number;
+  /** First match and event index where it appeared. */
+  matchId: number;
+  index: number;
+  /** Plain text of the first occurrence that had any (truncated), or "" when all were empty. */
+  sampleText: string;
+}
+
+export interface ParseLiveOptions {
+  /** Called once per unknown type after parsing. Defaults to console.warn. */
+  logUnknownKey?: (entry: UnknownEventKey) => void;
+}
+
+const SAMPLE_LENGTH = 160;
+
+function defaultLog(entry: UnknownEventKey): void {
+  console.warn(
+    `[chpp] Unknown event key ${entry.keys.join(', ')} (x${entry.count}, match ${entry.matchId} index ${entry.index}): ` +
+      (entry.sampleText ? `"${entry.sampleText}"` : '(no text)'),
+  );
 }
 
 /** Events whose SubjectTeamID holds something else (docs/chpp-event-types.md). */
@@ -37,10 +66,16 @@ const SUBJECT_TEAM_NOT_A_TEAM: ReadonlySet<number> = new Set([30, 31, 32, 33]);
 /** Set-piece taker row in the starting lineup (not a position). */
 const SET_PIECE_ROLE = 18;
 
-export function parseLive(xml: string): LiveResponse {
+export function parseLive(xml: string, options: ParseLiveOptions = {}): LiveResponse {
   const doc = parseXml(xml);
   const warnings: string[] = [];
-  const matches = children(child(doc, 'MatchList'), 'Match').map((m) => parseMatch(m, warnings));
+  const unknown = new Map<string, UnknownEventKey>();
+  const matches = children(child(doc, 'MatchList'), 'Match').map((m) =>
+    parseMatch(m, { warnings, unknown }),
+  );
+  const unknownKeys = [...unknown.values()];
+  const log = options.logUnknownKey ?? defaultLog;
+  for (const entry of unknownKeys) log(entry);
   const fileName = childText(doc, 'FileName');
   const version = childText(doc, 'Version');
   const fetched = childText(doc, 'FetchedDate');
@@ -50,7 +85,13 @@ export function parseLive(xml: string): LiveResponse {
     ...(fetched ? { fetchedDate: toIsoLocal(fetched) } : {}),
     matches,
     warnings,
+    unknownKeys,
   };
+}
+
+interface ParseContext {
+  warnings: string[];
+  unknown: Map<string, UnknownEventKey>;
 }
 
 /** "2003-07-18 20:00:00" -> "2003-07-18T20:00:00" (Hattrick time, no zone). */
@@ -58,7 +99,8 @@ export function toIsoLocal(value: string): string {
   return value.trim().replace(' ', 'T');
 }
 
-function parseMatch(m: XmlElement, warnings: string[]): Match {
+function parseMatch(m: XmlElement, ctx: ParseContext): Match {
+  const matchId = childInt(m, 'MatchID') ?? 0;
   const home = parseTeam(child(m, 'HomeTeam'), 'Home');
   const away = parseTeam(child(m, 'AwayTeam'), 'Away');
   const sideOfTeam = (teamId: number | undefined): Side | undefined =>
@@ -72,7 +114,7 @@ function parseMatch(m: XmlElement, warnings: string[]): Match {
 
   const events: MatchEvent[] = [];
   for (const e of children(child(m, 'EventList'), 'Event')) {
-    const parsed = parseEvent(e, sideOfTeam, warnings);
+    const parsed = parseEvent(e, sideOfTeam, matchId, ctx);
     if (parsed) events.push(parsed);
   }
 
@@ -87,7 +129,7 @@ function parseMatch(m: XmlElement, warnings: string[]): Match {
   const nextPart = childInt(m, 'NextEventMatchPart');
 
   return {
-    matchId: childInt(m, 'MatchID') ?? 0,
+    matchId,
     sourceSystem: childText(m, 'SourceSystem') ?? 'Hattrick',
     matchType: childInt(m, 'MatchType') ?? 0,
     matchDate: toIsoLocal(childText(m, 'MatchDate') ?? ''),
@@ -137,7 +179,8 @@ function parseTeam(el: XmlElement | undefined, prefix: 'Home' | 'Away'): Team {
 function parseEvent(
   e: XmlElement,
   sideOfTeam: (teamId: number | undefined) => Side | undefined,
-  warnings: string[],
+  matchId: number,
+  ctx: ParseContext,
 ): MatchEvent | undefined {
   const indexAttr = e.attributes['Index'];
   const index = indexAttr !== undefined && /^\d+$/.test(indexAttr) ? Number(indexAttr) : undefined;
@@ -145,26 +188,28 @@ function parseEvent(
   const parsedKey = parseEventKey(key);
   const minute = childInt(e, 'Minute');
   const part = childInt(e, 'MatchPart');
-  if (
-    index === undefined ||
-    !parsedKey ||
-    minute === undefined ||
-    part === undefined ||
-    !isMatchPart(part)
-  ) {
-    warnings.push(
-      `Skipped event ${indexAttr ?? '?'} (key "${key}", minute ${minute}, part ${part})`,
+  const html = childText(e, 'EventText') ?? '';
+  if (index === undefined || minute === undefined || part === undefined || !isMatchPart(part)) {
+    // Without a position in the match the event cannot be scheduled.
+    const sample = sampleOf(html);
+    ctx.warnings.push(
+      `Skipped event ${indexAttr ?? '?'} (key "${key}", minute ${minute}, part ${part})` +
+        (sample ? `: "${sample}"` : ''),
     );
     return undefined;
   }
-  const { typeId, variant } = parsedKey;
+  // An unreadable key or an undocumented type is kept (its text can still be spoken) and logged.
+  const typeId = parsedKey?.typeId ?? 0;
+  const variant = parsedKey?.variant ?? 0;
+  const classified = classifyEventType(typeId);
+  if (!parsedKey || !classified.known)
+    recordUnknown(ctx, parsedKey?.typeId, key, matchId, index, html);
 
   // Unsupported ID fields: keep them raw (0 means none) but never depend on them.
   const subjectTeamId = nonZero(childInt(e, 'SubjectTeamID'));
   const subjectPlayerId = nonZero(childInt(e, 'SubjectPlayerID'));
   const objectPlayerId = nonZero(childInt(e, 'ObjectPlayerID'));
 
-  const html = childText(e, 'EventText') ?? '';
   // On some events SubjectTeamID is not a team (30-33: total seats), so it must not pick a side.
   const teamSide = SUBJECT_TEAM_NOT_A_TEAM.has(typeId) ? undefined : sideOfTeam(subjectTeamId);
   const data = eventData(typeId, teamSide, subjectPlayerId, objectPlayerId, subjectTeamId, html);
@@ -179,7 +224,7 @@ function parseEvent(
     key,
     typeId,
     variant,
-    group: eventGroup(typeId),
+    ...classified,
     ...(side ? { side } : {}),
     ...(subjectTeamId !== undefined ? { subjectTeamId } : {}),
     ...(subjectPlayerId !== undefined ? { subjectPlayerId } : {}),
@@ -187,6 +232,38 @@ function parseEvent(
     beats,
     ...(data ? { data } : {}),
   };
+}
+
+function recordUnknown(
+  ctx: ParseContext,
+  typeId: number | undefined,
+  key: string,
+  matchId: number,
+  index: number,
+  html: string,
+): void {
+  const id = typeId !== undefined ? `type:${typeId}` : `key:${key}`;
+  const sample = sampleOf(html);
+  const entry = ctx.unknown.get(id);
+  if (!entry) {
+    ctx.unknown.set(id, {
+      ...(typeId !== undefined ? { typeId } : {}),
+      keys: [key],
+      count: 1,
+      matchId,
+      index,
+      sampleText: sample,
+    });
+    return;
+  }
+  entry.count += 1;
+  if (!entry.keys.includes(key)) entry.keys.push(key);
+  if (!entry.sampleText && sample) entry.sampleText = sample;
+}
+
+function sampleOf(html: string): string {
+  const text = plainText(html);
+  return text.length > SAMPLE_LENGTH ? `${text.slice(0, SAMPLE_LENGTH - 1)}…` : text;
 }
 
 function nonZero(value: number | undefined): number | undefined {

@@ -11,7 +11,10 @@ import realXml from '../../../../fixtures/real/live-viewall-livetexts.xml?raw';
 import { parseLive } from '../chpp/live';
 import { createReplaySource } from './replay-source';
 
-const [canada, cacio] = parseLive(realXml).matches as [Match, Match];
+const [canada, cacio] = parseLive(realXml, { logUnknownKey: () => undefined }).matches as [
+  Match,
+  Match,
+];
 const START = Date.UTC(2026, 10, 6, 12, 0, 0);
 
 /** Polls the way the live app does: at each nextPollAt until finished. Returns every update. */
