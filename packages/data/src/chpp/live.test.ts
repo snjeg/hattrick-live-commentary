@@ -54,7 +54,7 @@ describe('live 2.3, live-texts mode (real fixture)', () => {
     const pre = cacio.events.filter((e) => e.minute < 0);
     expect(pre.map((e) => e.minute)).toEqual([-3, -2, -2, -2, -2, -1, -1]);
     expect(pre.every((e) => e.part === 0)).toBe(true);
-    expect(byKey(cacio, '703_2')).toMatchObject({ minute: -3, group: 'fanReaction' });
+    expect(byKey(cacio, '703_2')).toMatchObject({ minute: -3, group: 'managerQuote' });
   });
 
   it('splits event text on <br/> into beats, one per dramatic line', () => {
@@ -114,7 +114,7 @@ describe('live 2.3, live-texts mode (real fixture)', () => {
     expect(byKey(canada, '162_2').side).toBe('away');
     expect(byKey(canada, '219_1').side).toBe('away');
     expect(byKey(canada, '45_1').side).toBeUndefined();
-    // SubjectTeamID 17417 on a stadium event is not a team: no side, no crash.
+    // SubjectTeamID on stadium events is the total seats, not a team.
     expect(byKey(cacio, '32_2').side).toBeUndefined();
   });
 
@@ -133,14 +133,19 @@ describe('live 2.3, live-texts mode (real fixture)', () => {
       kind: 'weather',
       weather: 'sunny',
       venue: 'stadium',
+      spectators: 59222,
     });
     expect(byKey(cacio, '32_2').data).toEqual({
       kind: 'weather',
       weather: 'fair',
       venue: 'stadium',
+      arenaId: 3241044,
+      spectators: 17417,
+      capacity: 17417,
     });
     expect(byKey(cacio, '464_1').data).toEqual({ kind: 'attendance', spectators: 17417 });
     expect(byKey(cacio, '75_4').data).toEqual({ kind: 'addedTime', minutes: 2 });
+    expect(byKey(cacio, '454_2').data).toEqual({ kind: 'injuryWeeks', weeks: 1 });
   });
 
   it('derives the running score from goal events and matches the reported score', () => {

@@ -31,6 +31,9 @@ export interface LiveResponse {
   warnings: string[];
 }
 
+/** Events whose SubjectTeamID holds something else (docs/chpp-event-types.md). */
+const SUBJECT_TEAM_NOT_A_TEAM: ReadonlySet<number> = new Set([30, 31, 32, 33]);
+
 /** Set-piece taker row in the starting lineup (not a position). */
 const SET_PIECE_ROLE = 18;
 
@@ -162,8 +165,9 @@ function parseEvent(
   const objectPlayerId = nonZero(childInt(e, 'ObjectPlayerID'));
 
   const html = childText(e, 'EventText') ?? '';
-  const teamSide = sideOfTeam(subjectTeamId);
-  const data = eventData(typeId, teamSide, subjectPlayerId, objectPlayerId, html);
+  // On some events SubjectTeamID is not a team (30-33: total seats), so it must not pick a side.
+  const teamSide = SUBJECT_TEAM_NOT_A_TEAM.has(typeId) ? undefined : sideOfTeam(subjectTeamId);
+  const data = eventData(typeId, teamSide, subjectPlayerId, objectPlayerId, subjectTeamId, html);
   const formationLabel = data?.kind === 'formation' ? data.formation.label : undefined;
   const beats = splitBeats(html, formationLabel ? { formationLabel } : {});
   const side = teamSide ?? sideFromMentions(beats.flatMap((b) => b.mentions));
@@ -200,10 +204,21 @@ function eventData(
   side: Side | undefined,
   subject: number | undefined,
   object: number | undefined,
+  subjectTeam: number | undefined,
   html: string,
 ): EventData | undefined {
   const weather = venueWeather(typeId);
-  if (weather) return { kind: 'weather', ...weather };
+  if (weather) {
+    // 30-33: SubjectPlayerID arena ID, ObjectPlayerID sold seats, SubjectTeamID seats in total.
+    const stadium = typeId >= 30 && typeId <= 33;
+    return {
+      kind: 'weather',
+      ...weather,
+      ...(stadium && subject !== undefined ? { arenaId: subject } : {}),
+      ...(stadium && object !== undefined ? { spectators: object } : {}),
+      ...(stadium && subjectTeam !== undefined ? { capacity: subjectTeam } : {}),
+    };
+  }
 
   switch (typeId) {
     case 20: {
@@ -213,16 +228,15 @@ function eventData(
     }
     case 23:
     case 24: {
-      // Both formations: SubjectPlayerID = home, ObjectPlayerID = away.
+      // Lineup codes: SubjectPlayerID = home, ObjectPlayerID = away (official).
       const home = subject !== undefined ? decodeFormation(subject) : undefined;
       const away = object !== undefined ? decodeFormation(object) : undefined;
       return home || away
         ? { kind: 'formations', ...(home ? { home } : {}), ...(away ? { away } : {}) }
         : undefined;
     }
-    case 335:
     case 481: {
-      // Formation code seen here; which field holds it is not documented, so accept either.
+      // "New formation today": which field holds the code is not documented, so accept either.
       const formation =
         (object !== undefined ? decodeFormation(object) : undefined) ??
         (subject !== undefined ? decodeFormation(subject) : undefined);
@@ -230,11 +244,18 @@ function eventData(
     }
     case 464:
       return object !== undefined ? { kind: 'attendance', spectators: object } : undefined;
+    case 454:
+      return object !== undefined ? { kind: 'injuryWeeks', weeks: object } : undefined;
+    case 61:
+      return subject !== undefined ? { kind: 'organisation', level: subject } : undefined;
+    case 64:
+      return object !== undefined ? { kind: 'organisation', level: object } : undefined;
     case 75: {
       const minutes = object ?? addedMinutesFromText(plainText(html));
       return minutes !== undefined ? { kind: 'addedTime', minutes } : undefined;
     }
     case 40:
+      // Midfield possession in percent (official).
       return object !== undefined && object <= 100
         ? { kind: 'possession', percent: object, ...(side ? { side } : {}) }
         : undefined;
