@@ -1,1 +1,1 @@
-export const packageName = '@hlc/data';
+export * from './chpp';
