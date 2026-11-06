@@ -30,7 +30,11 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0(vite@8.3.6)
 
-  packages/audio: {}
+  packages/audio:
+    dependencies:
+      '@hlc/core':
+        specifier: workspace:*
+        version: link:../core
 
   packages/core: {}
 

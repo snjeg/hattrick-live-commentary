@@ -1,1 +1,1 @@
-export const packageName = '@hlc/audio';
+export * from './voice';
