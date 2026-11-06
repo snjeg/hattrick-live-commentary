@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HattrickData>
+  <FileName>live.xml</FileName>
+  <Version>2.3</Version>
+  <UserID>14663709</UserID>
+  <FetchedDate>2026-11-06 15:15:28</FetchedDate>
+  <MatchList>
+    <Match>
+      <SourceSystem>Hattrick</SourceSystem>
+      <MatchID>9213692</MatchID>
+      <MatchType>11</MatchType>
+      <MatchDate>2003-07-18 20:00:00</MatchDate>
+      <HomeTeam>
+        <HomeTeamID>3010</HomeTeamID>
+        <HomeTeamName>Canada</HomeTeamName>
+        <HomeTeamShortName>Canada</HomeTeamShortName>
+        <StartingLineup>
+          <Player>
+            <PlayerID>3792497</PlayerID>
+            <RoleID>100</RoleID>
+            <PlayerName>Jamie Tourrette</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2757502</PlayerID>
+            <RoleID>101</RoleID>
+            <PlayerName>Ian Choi</PlayerName>
+            <Behaviour>2</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2418458</PlayerID>
+            <RoleID>106</RoleID>
+            <PlayerName>Horace Wolf</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2742397</PlayerID>
+            <RoleID>105</RoleID>
+            <PlayerName>Simon Ferguson</PlayerName>
+            <Behaviour>2</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2673893</PlayerID>
+            <RoleID>102</RoleID>
+            <PlayerName>John O'Connor</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>1567952</PlayerID>
+            <RoleID>104</RoleID>
+            <PlayerName>Brian Trapani</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2621963</PlayerID>
+            <RoleID>107</RoleID>
+            <PlayerName>Scott Rummens</PlayerName>
+            <Behaviour>1</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2779212</PlayerID>
+            <RoleID>109</RoleID>
+            <PlayerName>Ian Johnson</PlayerName>
+            <Behaviour>1</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2719180</PlayerID>
+            <RoleID>110</RoleID>
+            <PlayerName>Michael Cooper</PlayerName>
+            <Behaviour>1</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>3497216</PlayerID>
+            <RoleID>111</RoleID>
+            <PlayerName>Neil Pemberton</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2674655</PlayerID>
+            <RoleID>113</RoleID>
+            <PlayerName>Herman Ife</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2742397</PlayerID>
+            <RoleID>18</RoleID>
+            <PlayerName>Simon Ferguson</PlayerName>
+          </Player>
+        </StartingLineup>
+      </HomeTeam>
+      <AwayTeam>
+        <AwayTeamID>3025</AwayTeamID>
+        <AwayTeamName>Nederland</AwayTeamName>
+        <AwayTeamShortName>Nederland</AwayTeamShortName>
+        <StartingLineup>
+          <Player>
+            <PlayerID>2461515</PlayerID>
+            <RoleID>100</RoleID>
+            <PlayerName>Klaas Evers</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>3791042</PlayerID>
+            <RoleID>101</RoleID>
+            <PlayerName>Daan Hoekwater</PlayerName>
+            <Behaviour>2</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>3857367</PlayerID>
+            <RoleID>102</RoleID>
+            <PlayerName>Sylvester van Oostrom</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2749464</PlayerID>
+            <RoleID>104</RoleID>
+            <PlayerName>Keesje van Gompel</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2989957</PlayerID>
+            <RoleID>105</RoleID>
+            <PlayerName>Bert Evers</PlayerName>
+            <Behaviour>2</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2779026</PlayerID>
+            <RoleID>106</RoleID>
+            <PlayerName>Jord Somers</PlayerName>
+            <Behaviour>3</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>2747533</PlayerID>
+            <RoleID>107</RoleID>
+            <PlayerName>Eelco Jassies</PlayerName>
+            <Behaviour>1</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>1740999</PlayerID>
+            <RoleID>109</RoleID>
+            <PlayerName>Roel Dorenbos</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>3614708</PlayerID>
+            <RoleID>110</RoleID>
+            <PlayerName>Goos Savelkoul</PlayerName>
+            <Behaviour>3</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>3742766</PlayerID>
+            <RoleID>111</RoleID>
+            <PlayerName>Kornel ten Berge</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>3679819</PlayerID>
+            <RoleID>113</RoleID>
+            <PlayerName>Freddie van Steenderen</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>1740999</PlayerID>
+            <RoleID>18</RoleID>
+            <PlayerName>Roel Dorenbos</PlayerName>
+          </Player>
+        </StartingLineup>
+      </AwayTeam>
+      <Substitutions />
+      <EventList>
+        <Event Index="1">
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>59222</ObjectPlayerID>
+          <EventKey>33_2</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>&lt;br/&gt;</EventText>
+        </Event>
+        <Event Index="2">
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>27_3</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>Although the formal home team was &lt;span class="hometeam"&gt;Canada&lt;/span&gt;, the spectators were of course much preferring &lt;span class="awayteam"&gt;Nederland&lt;/span&gt;.</EventText>
+        </Event>
+        <Event Index="3">
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>1030502</ObjectPlayerID>
+          <EventKey>20_2</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>&lt;span class="hometeam"&gt;Canada&lt;/span&gt; had chosen a strategic [Replacement Error: Context 'formation' not found] formation.</EventText>
+        </Event>
+        <Event Index="4">
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>21_2</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>The &lt;span class="hometeam"&gt;Canada&lt;/span&gt; goalkeeper today will be &lt;a href="/Club/Players/Player.aspx?playerId=3792497" title="Tourrette" class="homeplayer"&gt;Tourrette&lt;/a&gt;, and trying to protect him will be &lt;a href="/Club/Players/Player.aspx?playerId=2757502" title="Choi" class="homeplayer"&gt;Choi&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=2418458" title="Wolf" class="homeplayer"&gt;Wolf&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=2742397" title="Ferguson" class="homeplayer"&gt;Ferguson&lt;/a&gt; in the defensive back-line.&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;The midfield is made-up of &lt;a href="/Club/Players/Player.aspx?playerId=2673893" title="O&amp;#39;Connor" class="homeplayer"&gt;O'Connor&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=1567952" title="Trapani" class="homeplayer"&gt;Trapani&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=2621963" title="Rummens" class="homeplayer"&gt;Rummens&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=2779212" title="Johnson" class="homeplayer"&gt;Johnson&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=2719180" title="Cooper" class="homeplayer"&gt;Cooper&lt;/a&gt;, while &lt;a href="/Club/Players/Player.aspx?playerId=3497216" title="Pemberton" class="homeplayer"&gt;Pemberton&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=2674655" title="Ife" class="homeplayer"&gt;Ife&lt;/a&gt; will be relied upon to score goals, and lots of them.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event Index="5">
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>1040402</ObjectPlayerID>
+          <EventKey>20_2</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>&lt;span class="awayteam"&gt;Nederland&lt;/span&gt; had chosen a strategic [Replacement Error: Context 'formation' not found] formation.</EventText>
+        </Event>
+        <Event Index="6">
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>21_1</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>&lt;span class="awayteam"&gt;Nederland&lt;/span&gt; have &lt;a href="/Club/Players/Player.aspx?playerId=2461515" title="Evers" class="awayplayer"&gt;Evers&lt;/a&gt; in goal today.&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=3791042" title="Hoekwater" class="awayplayer"&gt;Hoekwater&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=3857367" title="van Oostrom" class="awayplayer"&gt;van Oostrom&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=2749464" title="van Gompel" class="awayplayer"&gt;van Gompel&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=2989957" title="Evers" class="awayplayer"&gt;Evers&lt;/a&gt; will handle the defence.&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;In front of them &lt;a href="/Club/Players/Player.aspx?playerId=2779026" title="Somers" class="awayplayer"&gt;Somers&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=2747533" title="Jassies" class="awayplayer"&gt;Jassies&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=1740999" title="Dorenbos" class="awayplayer"&gt;Dorenbos&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=3614708" title="Savelkoul" class="awayplayer"&gt;Savelkoul&lt;/a&gt; will operate the midfield, setting up &lt;a href="/Club/Players/Player.aspx?playerId=3742766" title="ten Berge" class="awayplayer"&gt;ten Berge&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=3679819" title="van Steenderen" class="awayplayer"&gt;van Steenderen&lt;/a&gt; to spearhead the attack.  &lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event Index="7">
+          <Minute>23</Minute>
+          <SubjectPlayerID>3857367</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>510_2</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>A &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; player goes studs up on his opponent!&lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=3857367" title="Sylvester van Oostrom" class="awayplayer"&gt;Sylvester van Oostrom&lt;/a&gt; wins the challenge but is rightly penalised. &lt;br/&gt;The referee shows him the yellow card.</EventText>
+        </Event>
+        <Event Index="8">
+          <Minute>36</Minute>
+          <SubjectPlayerID>3497216</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>2461515</ObjectPlayerID>
+          <EventKey>121_1</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>An interesting bit of build-up play beginning here ...&lt;br/&gt;Some fans are rising from their seats in expectation...&lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=3497216" title="Neil Pemberton" class="homeplayer"&gt;Neil Pemberton&lt;/a&gt; looks like he is trying to find an opening...&lt;br/&gt;He's gone for a speculative chip - the goalkeeper is scrambling back...&lt;br/&gt;GOAL! The keeper's hand stretched out desperately but couldn't stop it beating him to make the score 1 - 0 to &lt;span class="hometeam"&gt;Canada&lt;/span&gt;.</EventText>
+        </Event>
+        <Event Index="9">
+          <Minute>45</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>45_1</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>The referee blows the whistle...&lt;br/&gt;And that's all for the first half. The score so far 1 - 0.</EventText>
+        </Event>
+        <Event Index="10">
+          <Minute>45</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>47_2</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>This part of the game has been a stand-off between the teams.</EventText>
+        </Event>
+        <Event Index="11">
+          <Minute>51</Minute>
+          <SubjectPlayerID>3614708</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>3679819</ObjectPlayerID>
+          <EventKey>219_1</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>Elegant corner kick by &lt;a href="/Club/Players/Player.aspx?playerId=3679819" title="Freddie van Steenderen" class="awayplayer"&gt;Freddie van Steenderen&lt;/a&gt;. It's firm, it's high, and it swerves in dangerously in front of the goal. &lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=3614708" title="Goos Savelkoul" class="awayplayer"&gt;Goos Savelkoul&lt;/a&gt; wins the header from a standing start despite the attention of two defenders!&lt;br/&gt;It's powerful and precise, but the goalkeeper chances in the right direction and can block it. &lt;br/&gt;Still a very impressive display by &lt;a href="/Club/Players/Player.aspx?playerId=3614708" title="Goos Savelkoul" class="awayplayer"&gt;Goos Savelkoul&lt;/a&gt;, such a dominating force in the air. </EventText>
+        </Event>
+        <Event Index="12">
+          <Minute>73</Minute>
+          <SubjectPlayerID>2621963</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>2461515</ObjectPlayerID>
+          <EventKey>233_2</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>It's a continued push forward for &lt;span class="hometeam"&gt;Canada&lt;/span&gt;, this time on the right wing.&lt;br/&gt;The home fans sense more goals in the making!&lt;br/&gt;The &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; are doing a good job covering the box, and the &lt;span class="hometeam"&gt;Canada&lt;/span&gt; winger is running out of options...&lt;br/&gt;He lifts the ball into the area on the off chance someone will reach it.&lt;br/&gt;It finds &lt;a href="/Club/Players/Player.aspx?playerId=2621963" title="Scott Rummens" class="homeplayer"&gt;Scott Rummens&lt;/a&gt;, who nearly scores with a header! Unfortunately, it's tipped away by the keeper.</EventText>
+        </Event>
+        <Event Index="13">
+          <Minute>79</Minute>
+          <SubjectPlayerID>1740999</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>3792497</ObjectPlayerID>
+          <EventKey>162_2</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>An interesting bit of build-up play beginning here ...&lt;br/&gt;The away fans sense an opportunity, and get to their feet ...&lt;br/&gt;From out left, &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; floats a ball over the &lt;span class="hometeam"&gt;Canada&lt;/span&gt; defenders ...&lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=1740999" title="Roel Dorenbos" class="awayplayer"&gt;Roel Dorenbos&lt;/a&gt; has his eyes firmly fixed on the ball. He hits it sweetly on the volley! &lt;br/&gt;Goalkeeper reacts! No chance - GOAL! Sparks seemed to fly from the boot of &lt;a href="/Club/Players/Player.aspx?playerId=1740999" title="Roel Dorenbos" class="awayplayer"&gt;Roel Dorenbos&lt;/a&gt; on contact! Beautiful strike!! We'll be watching that replay in the best of the month. It's all even now! 1 - 1.</EventText>
+        </Event>
+        <Event Index="14">
+          <Minute>83</Minute>
+          <SubjectPlayerID>3497216</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>2461515</ObjectPlayerID>
+          <EventKey>221_2</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>A &lt;span class="hometeam"&gt;Canada&lt;/span&gt; midfielder embarks on a fine direct run down the inside. &lt;br/&gt;He nears the edge of the &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; box, where he's challenged by the defender.&lt;br/&gt;He slips through, then lays it off to &lt;a href="/Club/Players/Player.aspx?playerId=3497216" title="Neil Pemberton" class="homeplayer"&gt;Neil Pemberton&lt;/a&gt; who instinctively goes for the half-volley.&lt;br/&gt;So close! It brushes off the post, and wide!</EventText>
+        </Event>
+        <Event Index="15">
+          <Minute>90</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>51</ObjectPlayerID>
+          <EventKey>40_3</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>&lt;span class="hometeam"&gt;Canada&lt;/span&gt; claimed to have seen most of the ball, and the statistics agreed with them - possession being 51 percent.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event Index="16">
+          <Minute>90</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>70_2</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>There are only a few seconds left of regular time and we have no winner as yet.&lt;br/&gt;Since this match cannot end with a draw the referee is going to call for extra time. &lt;br/&gt;And so he does! The players will have a quick refreshment on the sidelines before we kick off again.</EventText>
+        </Event>
+        <Event Index="17">
+          <Minute>96</Minute>
+          <SubjectPlayerID>1740999</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>3792497</ObjectPlayerID>
+          <EventKey>273_1</EventKey>
+          <MatchPart>3</MatchPart>
+          <EventText>Lovely interchange passing down the right-hand side here. It could lead to something interesting for &lt;span class="awayteam"&gt;Nederland&lt;/span&gt;...&lt;br/&gt;The away terraces are holding their breath in the hope that this leads to something special...&lt;br/&gt;This could be it! &lt;span class="awayteam"&gt;Nederland&lt;/span&gt;'s fans are on their feet as this could be a breakthrough chance!&lt;br/&gt;Oh &lt;a href="/Club/Players/Player.aspx?playerId=1740999" title="Roel Dorenbos" class="awayplayer"&gt;Roel Dorenbos&lt;/a&gt; of &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; should have buried that, but after 96 minutes he chased a through ball from the right, &lt;a href="/Club/Players/Player.aspx?playerId=3792497" title="Jamie Tourrette" class="homeplayer"&gt;Jamie Tourrette&lt;/a&gt; was out as fast as a snake, grabbing the ball from right under his nose.</EventText>
+        </Event>
+        <Event Index="18">
+          <Minute>120</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>71_1</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>Extra time has come to an end and this game is still tied.&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;This will be decided by penalties!&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event Index="19">
+          <Minute>121</Minute>
+          <SubjectPlayerID>2742397</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>2461515</ObjectPlayerID>
+          <EventKey>59_3</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>Someone who is not likely to be affected by his nerves in a situation like this is &lt;a href="/Club/Players/Player.aspx?playerId=2742397" title="Simon Ferguson" class="homeplayer"&gt;Simon Ferguson&lt;/a&gt;, the &lt;span class="hometeam"&gt;Canada&lt;/span&gt; player...&lt;br/&gt;Let's see what he can do here.&lt;br/&gt;There it goes.&lt;br/&gt;It's an interesting kick, but &lt;a href="/Club/Players/Player.aspx?playerId=2461515" title="Klaas Evers" class="awayplayer"&gt;Klaas Evers&lt;/a&gt; manages to make the save! Good work by the keeper to keep the score at 1 - 1!</EventText>
+        </Event>
+        <Event Index="20">
+          <Minute>122</Minute>
+          <SubjectPlayerID>3679819</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>3792497</ObjectPlayerID>
+          <EventKey>59_3</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>Someone who is not likely to be affected by his nerves in a situation like this is &lt;a href="/Club/Players/Player.aspx?playerId=3679819" title="Freddie van Steenderen" class="awayplayer"&gt;Freddie van Steenderen&lt;/a&gt;, the &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; player...&lt;br/&gt;Let's see what he can do here.&lt;br/&gt;There it goes.&lt;br/&gt;It's an interesting kick, but &lt;a href="/Club/Players/Player.aspx?playerId=3792497" title="Jamie Tourrette" class="homeplayer"&gt;Jamie Tourrette&lt;/a&gt; manages to make the save! Good work by the keeper to keep the score at 1 - 1!</EventText>
+        </Event>
+        <Event Index="21">
+          <Minute>123</Minute>
+          <SubjectPlayerID>2418458</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>2461515</ObjectPlayerID>
+          <EventKey>59_1</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>&lt;span class="hometeam"&gt;Canada&lt;/span&gt;'s &lt;a href="/Club/Players/Player.aspx?playerId=2418458" title="Horace Wolf" class="homeplayer"&gt;Horace Wolf&lt;/a&gt; to have a go from the spot here.&lt;br/&gt;He walks up with a sly grin on his face. He looks like he means business!&lt;br/&gt;He's put it wide! &lt;br/&gt;He oozed attitude as he placed that penalty kick, he just didn't do it well enough. </EventText>
+        </Event>
+        <Event Index="22">
+          <Minute>124</Minute>
+          <SubjectPlayerID>1740999</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>3792497</ObjectPlayerID>
+          <EventKey>56_2</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>It's time for &lt;span class="awayteam"&gt;Nederland&lt;/span&gt;'s &lt;a href="/Club/Players/Player.aspx?playerId=1740999" title="Roel Dorenbos" class="awayplayer"&gt;Roel Dorenbos&lt;/a&gt; to make the long walk to the spot.&lt;br/&gt;What's this?&lt;br/&gt;He looks like he's taunting the goalie!&lt;br/&gt;The keeper stares back, unfazed - let's see if the taker has jinxed his own penalty...&lt;br/&gt;Au contraire! He shows himself as the master of the situation and flicks it in to the right of a very frustrated keeper! 1 - 2.</EventText>
+        </Event>
+        <Event Index="23">
+          <Minute>125</Minute>
+          <SubjectPlayerID>1567952</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>2461515</ObjectPlayerID>
+          <EventKey>59_2</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>It is time for &lt;a href="/Club/Players/Player.aspx?playerId=1567952" title="Brian Trapani" class="homeplayer"&gt;Brian Trapani&lt;/a&gt; to make his mark for &lt;span class="hometeam"&gt;Canada&lt;/span&gt;.&lt;br/&gt;The pressure is always on the penalty kick taker, but he looks like he can handle it. &lt;br/&gt;It's well placed...&lt;br/&gt;It's a stellar block by &lt;a href="/Club/Players/Player.aspx?playerId=2461515" title="Klaas Evers" class="awayplayer"&gt;Klaas Evers&lt;/a&gt;! He just wouldn't let the ball in!</EventText>
+        </Event>
+        <Event Index="24">
+          <Minute>126</Minute>
+          <SubjectPlayerID>2747533</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>3792497</ObjectPlayerID>
+          <EventKey>59_1</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>&lt;span class="awayteam"&gt;Nederland&lt;/span&gt;'s &lt;a href="/Club/Players/Player.aspx?playerId=2747533" title="Eelco Jassies" class="awayplayer"&gt;Eelco Jassies&lt;/a&gt; to have a go from the spot here.&lt;br/&gt;He walks up with a sly grin on his face. He looks like he means business!&lt;br/&gt;He's put it wide! &lt;br/&gt;He oozed attitude as he placed that penalty kick, he just didn't do it well enough. </EventText>
+        </Event>
+        <Event Index="25">
+          <Minute>127</Minute>
+          <SubjectPlayerID>2779212</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>2461515</ObjectPlayerID>
+          <EventKey>59_2</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>It is time for &lt;a href="/Club/Players/Player.aspx?playerId=2779212" title="Ian Johnson" class="homeplayer"&gt;Ian Johnson&lt;/a&gt; to make his mark for &lt;span class="hometeam"&gt;Canada&lt;/span&gt;.&lt;br/&gt;The pressure is always on the penalty kick taker, but he looks like he can handle it. &lt;br/&gt;It's well placed...&lt;br/&gt;It's a stellar block by &lt;a href="/Club/Players/Player.aspx?playerId=2461515" title="Klaas Evers" class="awayplayer"&gt;Klaas Evers&lt;/a&gt;! He just wouldn't let the ball in!</EventText>
+        </Event>
+        <Event Index="26">
+          <Minute>128</Minute>
+          <SubjectPlayerID>3614708</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>3792497</ObjectPlayerID>
+          <EventKey>58_3</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>The referee signals that &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; is next up.&lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=3614708" title="Goos Savelkoul" class="awayplayer"&gt;Goos Savelkoul&lt;/a&gt; will be taking it.&lt;br/&gt;What's going through his mind, I wonder? He is certainly taking his time preparing for this one...&lt;br/&gt;It goes wide! The ball brushes the left post. The score is still 1 - 2. His nerves did him in!</EventText>
+        </Event>
+        <Event Index="27">
+          <Minute>129</Minute>
+          <SubjectPlayerID>2621963</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>2461515</ObjectPlayerID>
+          <EventKey>56_2</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>It's time for &lt;span class="hometeam"&gt;Canada&lt;/span&gt;'s &lt;a href="/Club/Players/Player.aspx?playerId=2621963" title="Scott Rummens" class="homeplayer"&gt;Scott Rummens&lt;/a&gt; to make the long walk to the spot.&lt;br/&gt;What's this?&lt;br/&gt;He looks like he's taunting the goalie!&lt;br/&gt;The keeper stares back, unfazed - let's see if the taker has jinxed his own penalty...&lt;br/&gt;Au contraire! He shows himself as the master of the situation and flicks it in to the right of a very frustrated keeper! 2 - 2.</EventText>
+        </Event>
+        <Event Index="28">
+          <Minute>130</Minute>
+          <SubjectPlayerID>3857367</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>3792497</ObjectPlayerID>
+          <EventKey>59_3</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>Someone who is not likely to be affected by his nerves in a situation like this is &lt;a href="/Club/Players/Player.aspx?playerId=3857367" title="Sylvester van Oostrom" class="awayplayer"&gt;Sylvester van Oostrom&lt;/a&gt;, the &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; player...&lt;br/&gt;Let's see what he can do here.&lt;br/&gt;There it goes.&lt;br/&gt;It's an interesting kick, but &lt;a href="/Club/Players/Player.aspx?playerId=3792497" title="Jamie Tourrette" class="homeplayer"&gt;Jamie Tourrette&lt;/a&gt; manages to make the save! Good work by the keeper to keep the score at 2 - 2!</EventText>
+        </Event>
+        <Event Index="29">
+          <Minute>131</Minute>
+          <SubjectPlayerID>2673893</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>2461515</ObjectPlayerID>
+          <EventKey>56_1</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>It is time for &lt;a href="/Club/Players/Player.aspx?playerId=2673893" title="John O&amp;#39;Connor" class="homeplayer"&gt;John O'Connor&lt;/a&gt; to make his mark for &lt;span class="hometeam"&gt;Canada&lt;/span&gt;.&lt;br/&gt;The pressure is always on the penalty kick taker, but he looks like he can handle it. &lt;br/&gt;It's well placed...&lt;br/&gt;And it's in of course! He keeps his cool, and now it is 3 - 2. </EventText>
+        </Event>
+        <Event Index="30">
+          <Minute>132</Minute>
+          <SubjectPlayerID>2749464</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>3792497</ObjectPlayerID>
+          <EventKey>59_3</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>Someone who is not likely to be affected by his nerves in a situation like this is &lt;a href="/Club/Players/Player.aspx?playerId=2749464" title="Keesje van Gompel" class="awayplayer"&gt;Keesje van Gompel&lt;/a&gt;, the &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; player...&lt;br/&gt;Let's see what he can do here.&lt;br/&gt;There it goes.&lt;br/&gt;It's an interesting kick, but &lt;a href="/Club/Players/Player.aspx?playerId=3792497" title="Jamie Tourrette" class="homeplayer"&gt;Jamie Tourrette&lt;/a&gt; manages to make the save! Good work by the keeper to keep the score at 3 - 2!</EventText>
+        </Event>
+        <Event Index="31">
+          <Minute>132</Minute>
+          <SubjectPlayerID>3792497</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>41_3</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>The most important &lt;span class="hometeam"&gt;Canada&lt;/span&gt; player was &lt;a href="/Club/Players/Player.aspx?playerId=3792497" title="Jamie Tourrette" class="homeplayer"&gt;Jamie Tourrette&lt;/a&gt;.</EventText>
+        </Event>
+        <Event Index="32">
+          <Minute>132</Minute>
+          <SubjectPlayerID>2418458</SubjectPlayerID>
+          <SubjectTeamID>3010</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>42_1</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>&lt;a href="/Club/Players/Player.aspx?playerId=2418458" title="Horace Wolf" class="homeplayer"&gt;Horace Wolf&lt;/a&gt; was a disappointment, however.</EventText>
+        </Event>
+        <Event Index="33">
+          <Minute>132</Minute>
+          <SubjectPlayerID>2461515</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>41_2</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>The most dominating &lt;span class="awayteam"&gt;Nederland&lt;/span&gt; player was without a doubt &lt;a href="/Club/Players/Player.aspx?playerId=2461515" title="Klaas Evers" class="awayplayer"&gt;Klaas Evers&lt;/a&gt;.</EventText>
+        </Event>
+        <Event Index="34">
+          <Minute>132</Minute>
+          <SubjectPlayerID>3614708</SubjectPlayerID>
+          <SubjectTeamID>3025</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>42_2</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>&lt;a href="/Club/Players/Player.aspx?playerId=3614708" title="Goos Savelkoul" class="awayplayer"&gt;Goos Savelkoul&lt;/a&gt; on the other hand, had a terrible day.</EventText>
+        </Event>
+        <Event Index="35">
+          <Minute>132</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>599_3</EventKey>
+          <MatchPart>4</MatchPart>
+          <EventText>The match ends 3 - 2.</EventText>
+        </Event>
+      </EventList>
+      <HomeGoals>3</HomeGoals>
+      <AwayGoals>2</AwayGoals>
+      <LastShownEventIndex>35</LastShownEventIndex>
+    </Match>
+    <Match>
+      <SourceSystem>Hattrick</SourceSystem>
+      <MatchID>767604296</MatchID>
+      <MatchType>1</MatchType>
+      <MatchDate>2026-10-24 11:15:00</MatchDate>
+      <HomeTeam>
+        <HomeTeamID>3244301</HomeTeamID>
+        <HomeTeamName>FC Cacio Pepe</HomeTeamName>
+        <HomeTeamShortName>Cacio</HomeTeamShortName>
+        <StartingLineup>
+          <Player>
+            <PlayerID>513123924</PlayerID>
+            <RoleID>100</RoleID>
+            <PlayerName>Yuriy Arakcheev</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>465787626</PlayerID>
+            <RoleID>101</RoleID>
+            <PlayerName>Bogusław Justyna</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>461426596</PlayerID>
+            <RoleID>105</RoleID>
+            <PlayerName>Alessandro Santarelli</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>512830215</PlayerID>
+            <RoleID>106</RoleID>
+            <PlayerName>Dawid Krupicki</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>512750054</PlayerID>
+            <RoleID>107</RoleID>
+            <PlayerName>Benedict Innes</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>512920689</PlayerID>
+            <RoleID>108</RoleID>
+            <PlayerName>Pedro Puga</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>513313440</PlayerID>
+            <RoleID>109</RoleID>
+            <PlayerName>Brahim Boujadi</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>513304443</PlayerID>
+            <RoleID>110</RoleID>
+            <PlayerName>Yurii Melnichenko</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>482563253</PlayerID>
+            <RoleID>111</RoleID>
+            <PlayerName>Vlastimil Lokvenc</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>510762960</PlayerID>
+            <RoleID>112</RoleID>
+            <PlayerName>Daniil Tsapenko</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>466189282</PlayerID>
+            <RoleID>113</RoleID>
+            <PlayerName>Gildo Zeddelmann</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>466189282</PlayerID>
+            <RoleID>18</RoleID>
+            <PlayerName>Gildo Zeddelmann</PlayerName>
+          </Player>
+        </StartingLineup>
+      </HomeTeam>
+      <AwayTeam>
+        <AwayTeamID>3273798</AwayTeamID>
+        <AwayTeamName>Soyboys</AwayTeamName>
+        <AwayTeamShortName>Soyboys</AwayTeamShortName>
+        <StartingLineup>
+          <Player>
+            <PlayerID>513148586</PlayerID>
+            <RoleID>100</RoleID>
+            <PlayerName>Paavo Hõbemägi</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>472395953</PlayerID>
+            <RoleID>102</RoleID>
+            <PlayerName>Daniel Przydatek</PlayerName>
+            <Behaviour>4</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>467865592</PlayerID>
+            <RoleID>104</RoleID>
+            <PlayerName>Adam Newsam</PlayerName>
+            <Behaviour>4</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>472015070</PlayerID>
+            <RoleID>106</RoleID>
+            <PlayerName>Pasi Uuttera</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>513257468</PlayerID>
+            <RoleID>107</RoleID>
+            <PlayerName>Franco Alfonso</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>512895559</PlayerID>
+            <RoleID>108</RoleID>
+            <PlayerName>Salvatore Laratore</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>512411370</PlayerID>
+            <RoleID>109</RoleID>
+            <PlayerName>林 (Lin) 祖航 (Zuhang)</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>471194776</PlayerID>
+            <RoleID>110</RoleID>
+            <PlayerName>Alberto Marchetti</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>468796626</PlayerID>
+            <RoleID>111</RoleID>
+            <PlayerName>Heribert Fonrodona</PlayerName>
+            <Behaviour>4</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>474587479</PlayerID>
+            <RoleID>112</RoleID>
+            <PlayerName>Samuel Dzimiński</PlayerName>
+            <Behaviour>0</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>474410667</PlayerID>
+            <RoleID>113</RoleID>
+            <PlayerName>Natã Bento</PlayerName>
+            <Behaviour>4</Behaviour>
+          </Player>
+          <Player>
+            <PlayerID>467865592</PlayerID>
+            <RoleID>18</RoleID>
+            <PlayerName>Adam Newsam</PlayerName>
+          </Player>
+        </StartingLineup>
+      </AwayTeam>
+      <Substitutions>
+        <Substitution>
+          <TeamID>3273798</TeamID>
+          <SubjectPlayerID>513148586</SubjectPlayerID>
+          <ObjectPlayerID>513188595</ObjectPlayerID>
+          <OrderType>1</OrderType>
+          <NewPositionId>100</NewPositionId>
+          <NewPositionBehaviour>0</NewPositionBehaviour>
+          <MatchMinute>33</MatchMinute>
+        </Substitution>
+      </Substitutions>
+      <EventList>
+        <Event Index="0">
+          <Minute>-3</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>703_2</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>As the referee started preparing for kick-off, a smattering of fireworks set off in the stands of the &lt;span class="awayteam"&gt;Soyboys&lt;/span&gt; fans, followed by song. After a short delay, the match could start as planned.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event Index="1">
+          <Minute>-2</Minute>
+          <SubjectPlayerID>3241044</SubjectPlayerID>
+          <SubjectTeamID>17417</SubjectTeamID>
+          <ObjectPlayerID>17417</ObjectPlayerID>
+          <EventKey>32_2</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>It is completely packed here at &lt;a href="/Club/Stadium/?stadiumId=3241044"&gt;Stadio al Dente&lt;/a&gt; today!&lt;br/&gt;Personally, I don't think the weather should matter to a real fan, but I know some only come out on a decent day like this.  &lt;a href="/Club/HallOfFame/Player.aspx?playerId=461686860"&gt;Becker Vargas&lt;/a&gt; is the appointed referee today, and they will be assisted by &lt;a href="/Club/HallOfFame/Player.aspx?playerId=448432230"&gt;Romolo Dentesano&lt;/a&gt; and &lt;a href="/Club/HallOfFame/Player.aspx?playerId=475561211"&gt;崔 (Cui) 书简 (Shujian)&lt;/a&gt;.</EventText>
+        </Event>
+        <Event Index="2">
+          <Minute>-2</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>1109</ObjectPlayerID>
+          <EventKey>25_5</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>It's derby day, and all of &lt;a href="/World/Regions/Region.aspx?RegionID=1109" title="Tallinn"&gt;Tallinn&lt;/a&gt; seems to have shut down due to this event!</EventText>
+        </Event>
+        <Event Index="3">
+          <Minute>-2</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>19_5</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>The players have received their final instructions from the coaches and are now entering the field. &lt;br/&gt;The referee is getting ready to start the game!</EventText>
+        </Event>
+        <Event Index="4">
+          <Minute>-2</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3244301</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>21_2</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>The &lt;span class="hometeam"&gt;Cacio&lt;/span&gt; goalkeeper today will be &lt;a href="/Club/Players/Player.aspx?playerId=513123924" title="Arakcheev" class="homeplayer"&gt;Arakcheev&lt;/a&gt;, and trying to protect him will be &lt;a href="/Club/Players/Player.aspx?playerId=465787626" title="Justyna" class="homeplayer"&gt;Justyna&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=461426596" title="Santarelli" class="homeplayer"&gt;Santarelli&lt;/a&gt; in the defensive back-line.&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;The midfield is made-up of &lt;a href="/Club/Players/Player.aspx?playerId=512830215" title="Krupicki" class="homeplayer"&gt;Krupicki&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=512750054" title="Innes" class="homeplayer"&gt;Innes&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=512920689" title="Puga" class="homeplayer"&gt;Puga&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=513313440" title="Boujadi" class="homeplayer"&gt;Boujadi&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=513304443" title="Melnichenko" class="homeplayer"&gt;Melnichenko&lt;/a&gt;, while &lt;a href="/Club/Players/Player.aspx?playerId=482563253" title="Lokvenc" class="homeplayer"&gt;Lokvenc&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=510762960" title="Tsapenko" class="homeplayer"&gt;Tsapenko&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=466189282" title="Zeddelmann" class="homeplayer"&gt;Zeddelmann&lt;/a&gt; will be relied upon to score goals, and lots of them.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event Index="5">
+          <Minute>-1</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>21_3</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>Here's the &lt;span class="awayteam"&gt;Soyboys&lt;/span&gt; lineup, then ...&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;In goal, &lt;a href="/Club/Players/Player.aspx?playerId=513148586" title="H&amp;#245;bem&amp;#228;gi" class="awayplayer"&gt;Hõbemägi&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;The defenders are &lt;a href="/Club/Players/Player.aspx?playerId=472395953" title="Przydatek" class="awayplayer"&gt;Przydatek&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=467865592" title="Newsam" class="awayplayer"&gt;Newsam&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;In midfield, &lt;a href="/Club/Players/Player.aspx?playerId=472015070" title="Uuttera" class="awayplayer"&gt;Uuttera&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=513257468" title="Alfonso" class="awayplayer"&gt;Alfonso&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=512895559" title="Laratore" class="awayplayer"&gt;Laratore&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=512411370" title="祖航 (Zuhang)" class="awayplayer"&gt;祖航 (Zuhang)&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=471194776" title="Marchetti" class="awayplayer"&gt;Marchetti&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;And finally, in attack they have &lt;a href="/Club/Players/Player.aspx?playerId=468796626" title="Fonrodona" class="awayplayer"&gt;Fonrodona&lt;/a&gt;, &lt;a href="/Club/Players/Player.aspx?playerId=474587479" title="Dzimiński" class="awayplayer"&gt;Dzimiński&lt;/a&gt; and &lt;a href="/Club/Players/Player.aspx?playerId=474410667" title="Bento" class="awayplayer"&gt;Bento&lt;/a&gt;. &lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event Index="6">
+          <Minute>-1</Minute>
+          <SubjectPlayerID>1020503</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>1020503</ObjectPlayerID>
+          <EventKey>23_1</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>The teams look to have come out with a similar approach to the game. &lt;br/&gt;Both coaches have chosen a 2-5-3 formation. </EventText>
+        </Event>
+        <Event Index="7">
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>598_2</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText>The teams are in position, and the referee signals that the match can start. There's the kick off, and a huge cheer erupts around the ground. The game is on!</EventText>
+        </Event>
+        <Event Index="8">
+          <Minute>5</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>811_3</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>No clear favourite today, at least not judging by past results.&lt;br/&gt;The last time these teams played it was a 0-0 draw, as you may remember. </EventText>
+        </Event>
+        <Event Index="9">
+          <Minute>19</Minute>
+          <SubjectPlayerID>51</SubjectPlayerID>
+          <SubjectTeamID>3244301</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>471_4</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>It's been a positive start to the game for &lt;span class="hometeam"&gt;Cacio&lt;/span&gt;. They have more of the ball possession, and I think we can expect this to lead to attacking chances as well. </EventText>
+        </Event>
+        <Event Index="10">
+          <Minute>24</Minute>
+          <SubjectPlayerID>512411370</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>513123924</ObjectPlayerID>
+          <EventKey>171_2</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>&lt;span class="awayteam"&gt;Soyboys&lt;/span&gt; drives forward through the middle. &lt;br/&gt;A lucky bounce gifts &lt;a href="/Club/Players/Player.aspx?playerId=512411370" title="林 (Lin) 祖航 (Zuhang)" class="awayplayer"&gt;林 (Lin) 祖航 (Zuhang)&lt;/a&gt; a chance...&lt;br/&gt;He takes it with aplomb, crashing a low shot toward the home team goalkeeper!&lt;br/&gt;It's in! That makes it 0 - 1. The guests are in the driver's seat now. &lt;a href="/Club/Players/Player.aspx?playerId=468796626" title="Heribert Fonrodona" class="awayplayer"&gt;Heribert Fonrodona&lt;/a&gt; laid it on a plate with that delivery!</EventText>
+        </Event>
+        <Event Index="11">
+          <Minute>26</Minute>
+          <SubjectPlayerID>512895559</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>513123924</ObjectPlayerID>
+          <EventKey>181_3</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>The teams are challenging each other to establish possession in central midfield.&lt;br/&gt;The hosts are showing heart, despite their disappointments so far. Let's see here ...&lt;br/&gt;&lt;span class="awayteam"&gt;Soyboys&lt;/span&gt; regains control of the ball, and immediately sends it high up the field.&lt;br/&gt;It's actually a fabulous pass.&lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=512895559" title="Salvatore Laratore" class="awayplayer"&gt;Salvatore Laratore&lt;/a&gt; receives it with perfect timing and has no trouble with placing it behind the goalkeeper. It's 0 - 2 now, and things are getting worse for &lt;span class="hometeam"&gt;Cacio&lt;/span&gt;. &lt;a href="/Club/Players/Player.aspx?playerId=468796626" title="Heribert Fonrodona" class="awayplayer"&gt;Heribert Fonrodona&lt;/a&gt; laid it on a plate with that delivery!</EventText>
+        </Event>
+        <Event Index="12">
+          <Minute>29</Minute>
+          <SubjectPlayerID>468796626</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>513123924</ObjectPlayerID>
+          <EventKey>283_5</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>&lt;a href="/Club/Players/Player.aspx?playerId=468796626" title="Heribert Fonrodona" class="awayplayer"&gt;Heribert Fonrodona&lt;/a&gt; cuts in towards the goal from the right.&lt;br/&gt;The &lt;span class="awayteam"&gt;Soyboys&lt;/span&gt; player strikes a curling left-foot shot from the edge of the area...&lt;br/&gt;So close! But in a heroic effort, a defender manages to keep the ball from crossing the goal-line!</EventText>
+        </Event>
+        <Event Index="13">
+          <Minute>33</Minute>
+          <SubjectPlayerID>513148586</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>1</ObjectPlayerID>
+          <EventKey>401_2</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>&lt;a href="/Club/Players/Player.aspx?playerId=513148586" title="Paavo H&amp;#245;bem&amp;#228;gi" class="awayplayer"&gt;Paavo Hõbemägi&lt;/a&gt; is massaging his left knee with a worried look on his face. &lt;br/&gt;He's up, testing a few tentative steps ... &lt;br/&gt;It still hurts. He will need to come off. </EventText>
+        </Event>
+        <Event Index="14">
+          <Minute>33</Minute>
+          <SubjectPlayerID>513148586</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>513188595</ObjectPlayerID>
+          <EventKey>424_3</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>The replacement for the injured player will be &lt;a href="/Club/Players/Player.aspx?playerId=513188595" title="Richard N&amp;#245;mmoja" class="awayplayer"&gt;Richard Nõmmoja&lt;/a&gt;. </EventText>
+        </Event>
+        <Event Index="15">
+          <Minute>36</Minute>
+          <SubjectPlayerID>513148586</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>1</ObjectPlayerID>
+          <EventKey>454_2</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>&lt;span class="awayteam"&gt;Soyboys&lt;/span&gt;'s doctor confirms that &lt;a href="/Club/Players/Player.aspx?playerId=513148586" title="Paavo H&amp;#245;bem&amp;#228;gi" class="awayplayer"&gt;Paavo Hõbemägi&lt;/a&gt; will need physical therapy for 1 week before he can play again.</EventText>
+        </Event>
+        <Event Index="16">
+          <Minute>38</Minute>
+          <SubjectPlayerID>467865592</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>513123924</ObjectPlayerID>
+          <EventKey>280_5</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>&lt;span class="awayteam"&gt;Soyboys&lt;/span&gt;'s &lt;a href="/Club/Players/Player.aspx?playerId=467865592" title="Adam Newsam" class="awayplayer"&gt;Adam Newsam&lt;/a&gt; has a free-kick on the edge of the area.&lt;br/&gt;He whips the ball into the box with a terrifying amount of in swing!&lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=467865592" title="Adam Newsam" class="awayplayer"&gt;Adam Newsam&lt;/a&gt; starts to peel away in celebration...!&lt;br/&gt;No, it's denied! &lt;a href="/Club/Players/Player.aspx?playerId=513123924" title="Yuriy Arakcheev" class="homeplayer"&gt;Yuriy Arakcheev&lt;/a&gt;'s big left hand stretches out and claws the ball clear. Stunning save!</EventText>
+        </Event>
+        <Event Index="17">
+          <Minute>39</Minute>
+          <SubjectPlayerID>474410667</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>511_2</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>The referee has seen something... &lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=474410667" title="Nat&amp;#227; Bento" class="awayplayer"&gt;Natã Bento&lt;/a&gt; of &lt;span class="awayteam"&gt;Soyboys&lt;/span&gt; is shown the yellow card!&lt;br/&gt;Unsportsmanlike behaviour!&lt;br/&gt;Apparently he mouthed off pretty badly about something, with the referee just a few steps away. Not too bright, that lad. </EventText>
+        </Event>
+        <Event Index="18">
+          <Minute>45</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>45_1</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>The referee blows the whistle...&lt;br/&gt;And that's all for the first half. The score so far 0 - 2.</EventText>
+        </Event>
+        <Event Index="19">
+          <Minute>45</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3244301</SubjectTeamID>
+          <ObjectPlayerID>51</ObjectPlayerID>
+          <EventKey>40_2</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>&lt;span class="hometeam"&gt;Cacio&lt;/span&gt; had most of the ball, with 51 percent of possession.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event Index="20">
+          <Minute>46</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>597_4</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>The referee blows the whistle. It's time for the second half!</EventText>
+        </Event>
+        <Event Index="21">
+          <Minute>51</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>17417</ObjectPlayerID>
+          <EventKey>464_1</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>Now, let's see! 17417 came through the turnstiles today. </EventText>
+        </Event>
+        <Event Index="22">
+          <Minute>59</Minute>
+          <SubjectPlayerID>461426596</SubjectPlayerID>
+          <SubjectTeamID>3244301</SubjectTeamID>
+          <ObjectPlayerID>513188595</ObjectPlayerID>
+          <EventKey>103_5</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>Look at &lt;span class="hometeam"&gt;Cacio&lt;/span&gt;’s &lt;a href="/Club/Players/Player.aspx?playerId=461426596" title="Alessandro Santarelli" class="homeplayer"&gt;Alessandro Santarelli&lt;/a&gt; run down the right side. He has his head up and a smile on his face. This means nothing but misery for the other team.&lt;br/&gt;He motions a teammate through the middle of the midfield, passes the ball, then darts down the side waiting for the return pass.&lt;br/&gt;There! The return pass is threaded perfectly through a defender’s wide stance and it’s collected cleanly ...&lt;br/&gt;... juggled a bit, then lifted up and over the defender ...&lt;br/&gt;... one more touch, and a SPECTACULAR BICYCLE KICK takes the ball right into the corner of the old onion bag! Renoir, Michelangelo, and Picasso never painted a better picture than that which &lt;a href="/Club/Players/Player.aspx?playerId=461426596" title="Alessandro Santarelli" class="homeplayer"&gt;Alessandro Santarelli&lt;/a&gt; has just painted! That helps the home team claw one back leaving the score at 1 – 2! &lt;a href="/Club/Players/Player.aspx?playerId=513304443" title="Yurii Melnichenko" class="homeplayer"&gt;Yurii Melnichenko&lt;/a&gt; pulled the strings in the build-up.</EventText>
+        </Event>
+        <Event Index="23">
+          <Minute>63</Minute>
+          <SubjectPlayerID>471194776</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>513123924</ObjectPlayerID>
+          <EventKey>181_5</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>&lt;a href="/Club/Players/Player.aspx?playerId=471194776" title="Alberto Marchetti" class="awayplayer"&gt;Alberto Marchetti&lt;/a&gt; plays a neat one-two near the penalty area ... &lt;br/&gt;He breaks through!&lt;br/&gt;The keeper shows impressive reflexes!&lt;br/&gt;Goal! The keeper touches it, but it's a real cannonball and he can't hold on to it. 1 - 3.</EventText>
+        </Event>
+        <Event Index="24">
+          <Minute>66</Minute>
+          <SubjectPlayerID>468796626</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>513123924</ObjectPlayerID>
+          <EventKey>183_4</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>&lt;span class="awayteam"&gt;Soyboys&lt;/span&gt; are looking really dangerous down their right hand side.&lt;br/&gt;&lt;a href="/Club/Players/Player.aspx?playerId=468796626" title="Heribert Fonrodona" class="awayplayer"&gt;Heribert Fonrodona&lt;/a&gt; is calling for the ball! I think he fancies his chances.&lt;br/&gt;This could be it! Great opportunity - he takes the shot...!&lt;br/&gt;It's a really powerful shot ...&lt;br/&gt;The keeper gets his hands on it but cannot hold on!&lt;br/&gt;It's 1-4, and the home crowd is NOT impressed with what they just witnessed!</EventText>
+        </Event>
+        <Event Index="25">
+          <Minute>78</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3244301</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>804_3</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>&lt;span class="hometeam"&gt;Cacio&lt;/span&gt; have had a great run in recent matches, but that dominance is nowhere to be seen today. </EventText>
+        </Event>
+        <Event Index="26">
+          <Minute>89</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>75_4</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>The referee will let play continue for an additional 2 minutes beyond the allotted 90. &lt;br/&gt;This is, of course, compensation for injury time and other delays we have seen during the match. </EventText>
+        </Event>
+        <Event Index="27">
+          <Minute>92</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>599_2</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>This match is over.&lt;br/&gt;The final result is 1 - 4.</EventText>
+        </Event>
+        <Event Index="28">
+          <Minute>92</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>601_5</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>The match is over! The &lt;span class="awayteam"&gt;Soyboys&lt;/span&gt; players are very happy, hugging each other and waving to their fans to thank them for their support. </EventText>
+        </Event>
+        <Event Index="29">
+          <Minute>92</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>3244301</SubjectTeamID>
+          <ObjectPlayerID>51</ObjectPlayerID>
+          <EventKey>40_4</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>Possession in this half belonged to &lt;span class="hometeam"&gt;Cacio&lt;/span&gt;, who controlled the ball 51 percent of the time.&lt;br /&gt;&lt;br /&gt;</EventText>
+        </Event>
+        <Event Index="30">
+          <Minute>92</Minute>
+          <SubjectPlayerID>482563253</SubjectPlayerID>
+          <SubjectTeamID>3244301</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>41_2</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>The most dominating &lt;span class="hometeam"&gt;Cacio&lt;/span&gt; player was without a doubt &lt;a href="/Club/Players/Player.aspx?playerId=482563253" title="Vlastimil Lokvenc" class="homeplayer"&gt;Vlastimil Lokvenc&lt;/a&gt;.</EventText>
+        </Event>
+        <Event Index="31">
+          <Minute>92</Minute>
+          <SubjectPlayerID>468796626</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>41_5</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>&lt;a href="/Club/Players/Player.aspx?playerId=468796626" title="Heribert Fonrodona" class="awayplayer"&gt;Heribert Fonrodona&lt;/a&gt; performed admirably for &lt;span class="awayteam"&gt;Soyboys&lt;/span&gt;.</EventText>
+        </Event>
+        <Event Index="32">
+          <Minute>92</Minute>
+          <SubjectPlayerID>21</SubjectPlayerID>
+          <SubjectTeamID>3244301</SubjectTeamID>
+          <ObjectPlayerID>21</ObjectPlayerID>
+          <EventKey>550_2</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText></EventText>
+        </Event>
+        <Event Index="33">
+          <Minute>92</Minute>
+          <SubjectPlayerID>19</SubjectPlayerID>
+          <SubjectTeamID>3273798</SubjectTeamID>
+          <ObjectPlayerID>18</ObjectPlayerID>
+          <EventKey>550_1</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText></EventText>
+        </Event>
+      </EventList>
+      <HomeGoals>1</HomeGoals>
+      <AwayGoals>4</AwayGoals>
+      <LastShownEventIndex>33</LastShownEventIndex>
+    </Match>
+  </MatchList>
+</HattrickData>
