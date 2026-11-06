@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SYNTHETIC: hand-written for tests, not fetched from Hattrick. Imitates live 2.3 viewAll with useLiveEventsAndTexts=false. -->
+<HattrickData>
+  <FileName>live.xml</FileName>
+  <Version>2.3</Version>
+  <UserID>1</UserID>
+  <FetchedDate>2026-11-06 12:00:00</FetchedDate>
+  <MatchList>
+    <Match>
+      <SourceSystem>Hattrick</SourceSystem>
+      <MatchID>1000001</MatchID>
+      <MatchType>1</MatchType>
+      <MatchDate>2026-11-01 15:00:00</MatchDate>
+      <HomeTeam>
+        <HomeTeamID>11</HomeTeamID>
+        <HomeTeamName>Sample Home FC</HomeTeamName>
+        <HomeTeamShortName>Home</HomeTeamShortName>
+      </HomeTeam>
+      <AwayTeam>
+        <AwayTeamID>22</AwayTeamID>
+        <AwayTeamName>Sample Away FC</AwayTeamName>
+        <AwayTeamShortName>Away</AwayTeamShortName>
+      </AwayTeam>
+      <Substitutions />
+      <EventList>
+        <Event Index="1">
+          <Minute>0</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>598_1</EventKey>
+          <MatchPart>0</MatchPart>
+          <EventText></EventText>
+        </Event>
+        <Event Index="2">
+          <Minute>12</Minute>
+          <SubjectPlayerID>501</SubjectPlayerID>
+          <SubjectTeamID>11</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>121_1</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>&lt;a href="/Club/Players/Player.aspx?playerId=501" title="Sam Home" class="homeplayer"&gt;Sam Home&lt;/a&gt; scored with a chip. 1 - 0.</EventText>
+        </Event>
+        <Event Index="4">
+          <Minute>30</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>22</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>332_1</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText />
+        </Event>
+        <Event Index="5">
+          <Minute>45</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>45_1</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>Half time. 1 – 0.</EventText>
+        </Event>
+        <Event Index="6">
+          <Minute>60</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>0</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>not-a-key</EventKey>
+          <MatchPart>2</MatchPart>
+          <EventText>Unreadable key: skipped with a warning.</EventText>
+        </Event>
+      </EventList>
+      <HomeGoals>1</HomeGoals>
+      <AwayGoals>0</AwayGoals>
+      <LastShownEventIndex>6</LastShownEventIndex>
+    </Match>
+    <Match>
+      <SourceSystem>Hattrick</SourceSystem>
+      <MatchID>1000002</MatchID>
+      <MatchType>1</MatchType>
+      <MatchDate>2026-11-08 15:00:00</MatchDate>
+      <HomeTeam>
+        <HomeTeamID>11</HomeTeamID>
+        <HomeTeamName>Sample Home FC</HomeTeamName>
+        <HomeTeamShortName>Home</HomeTeamShortName>
+      </HomeTeam>
+      <AwayTeam>
+        <AwayTeamID>33</AwayTeamID>
+        <AwayTeamName>Upcoming Opponent</AwayTeamName>
+        <AwayTeamShortName>Opponent</AwayTeamShortName>
+      </AwayTeam>
+      <Substitutions />
+      <EventList />
+    </Match>
+  </MatchList>
+</HattrickData>

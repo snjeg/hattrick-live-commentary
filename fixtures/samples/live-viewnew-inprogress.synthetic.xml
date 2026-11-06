@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SYNTHETIC: hand-written for tests, not fetched from Hattrick. A match in progress. The position of NextEventMinute/NextEventMatchPart inside Match is assumed (docs/open-questions.md). -->
+<HattrickData>
+  <FileName>live.xml</FileName>
+  <Version>2.3</Version>
+  <MatchList>
+    <Match>
+      <SourceSystem>Hattrick</SourceSystem>
+      <MatchID>1000003</MatchID>
+      <MatchType>1</MatchType>
+      <MatchDate>2026-11-06 12:00:00</MatchDate>
+      <HomeTeam>
+        <HomeTeamID>11</HomeTeamID>
+        <HomeTeamName>Sample Home FC</HomeTeamName>
+        <HomeTeamShortName>Home</HomeTeamShortName>
+      </HomeTeam>
+      <AwayTeam>
+        <AwayTeamID>22</AwayTeamID>
+        <AwayTeamName>Sample Away FC</AwayTeamName>
+        <AwayTeamShortName>Away</AwayTeamShortName>
+      </AwayTeam>
+      <EventList>
+        <Event Index="7">
+          <Minute>18</Minute>
+          <SubjectPlayerID>0</SubjectPlayerID>
+          <SubjectTeamID>22</SubjectTeamID>
+          <ObjectPlayerID>0</ObjectPlayerID>
+          <EventKey>510_1</EventKey>
+          <MatchPart>1</MatchPart>
+          <EventText>A late tackle.&lt;br/&gt;Yellow card.</EventText>
+        </Event>
+      </EventList>
+      <HomeGoals>0</HomeGoals>
+      <AwayGoals>0</AwayGoals>
+      <LastShownEventIndex>7</LastShownEventIndex>
+      <NextEventMinute>24</NextEventMinute>
+      <NextEventMatchPart>1</NextEventMatchPart>
+    </Match>
+  </MatchList>
+</HattrickData>

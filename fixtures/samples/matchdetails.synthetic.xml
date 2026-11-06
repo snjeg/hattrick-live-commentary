@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SYNTHETIC: hand-written for tests, not fetched from Hattrick. Only the documented Arena > WeatherID and AddedMinutes. -->
+<HattrickData>
+  <FileName>matchdetails.xml</FileName>
+  <Version>3.1</Version>
+  <Match>
+    <Arena>
+      <WeatherID>3</WeatherID>
+    </Arena>
+    <AddedMinutes>2</AddedMinutes>
+  </Match>
+</HattrickData>
