@@ -106,13 +106,17 @@ describe('talking points ranking', () => {
 });
 
 describe('talking points repetition', () => {
-  it('never repeats a fact or a topic immediately', () => {
+  it('never repeats a line, a fact or a topic immediately', () => {
     const tp = createTalkingPoints({ random: seededRandom(2) });
     tp.add(facts);
-    const lines = Array.from({ length: 12 }, (_, i) => tp.next(at(10 + i, (10 + i) * 30_000)));
+    const lines = Array.from({ length: 30 }, (_, i) => tp.next(at(10 + i, (10 + i) * 15_000)));
+    const kindOf = (id: string | undefined) => (id ?? '').split('.')[0];
     for (let i = 1; i < lines.length; i++) {
-      expect(lines[i]?.factId).not.toBe(lines[i - 1]?.factId);
       expect(lines[i]?.text).not.toBe(lines[i - 1]?.text);
+      if (lines[i]?.factId !== 'atmosphere') {
+        expect(lines[i]?.factId).not.toBe(lines[i - 1]?.factId);
+        expect(kindOf(lines[i]?.factId)).not.toBe(kindOf(lines[i - 1]?.factId));
+      }
     }
   });
 
@@ -139,6 +143,13 @@ describe('talking points repetition', () => {
     expect(lines.some((l) => l.factId === 'score' && l.text.includes('Cacio 0, Soyboys 0'))).toBe(
       true,
     );
+  });
+
+  it('holds back facts that were just read out', () => {
+    const tp = createTalkingPoints({ random: seededRandom(6), factCooldownMs: 5 * 60_000 });
+    tp.add([facts[0] as ContextFact], 0);
+    expect(tp.next(at(3, 60_000)).factId).not.toBe('weather');
+    expect(tp.next(at(9, 6 * 60_000)).factId).toBe('weather');
   });
 
   it('ignores duplicate facts', () => {

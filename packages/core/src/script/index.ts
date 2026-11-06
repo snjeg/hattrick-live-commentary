@@ -5,3 +5,5 @@ export * from './fill';
 export * from './templates';
 export * from './template-writer';
 export * from './talking-points';
+export * from './scheduler';
+export * from './simulate';
