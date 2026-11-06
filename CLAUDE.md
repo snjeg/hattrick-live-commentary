@@ -46,11 +46,14 @@ Data flow: CHPP (per-user session, directly from the extension) -> normalised Ma
 ```
 pnpm install
 pnpm test                          # all packages
-pnpm --filter core test            # one package
+pnpm --filter @hlc/core test       # one package (@hlc/core, data, audio, extension)
+pnpm lint                          # ESLint (also enforces core purity)
+pnpm typecheck                     # tsc in every package
+pnpm format:check                  # Prettier (code and config; Markdown is excluded)
 pnpm tsx scripts/replay.ts <matchId> --speed 10   # print script for a fixture
 pnpm tsx scripts/capture-fixture.ts <matchId>     # save a finished match
 ```
-(Commands are placeholders until Sprint 0 and 1 create them; update this section as they land.)
+(`install`, `test`, `lint`, `typecheck` and `format:check` exist since T1; the `scripts/` commands are placeholders until Sprint 1 creates them. Update this section as they land.)
 
 ## Working agreement
 - Ask before adding a new runtime dependency or a paid external service.

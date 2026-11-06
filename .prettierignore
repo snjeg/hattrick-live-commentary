@@ -1,0 +1,6 @@
+node_modules
+dist
+coverage
+pnpm-lock.yaml
+# Docs are hand-formatted; keep Prettier on code and config.
+*.md
