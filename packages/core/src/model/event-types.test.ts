@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   cardKind,
+  chanceInfo,
   chanceSituation,
   eventGroup,
   goalFor,
@@ -57,7 +58,18 @@ describe('eventGroup', () => {
     [24, 'formation'],
     [21, 'lineup'],
     [25, 'derby'],
-    [27, 'neutralGround'],
+    [26, 'neutralGround'],
+    [27, 'awayIsHome'],
+    [28, 'walkover'],
+    [38, 'venue'],
+    [47, 'possession'],
+    [80, 'teamNews'],
+    [307, 'specialEvent'],
+    [513, 'card'],
+    [596, 'extraTime'],
+    [802, 'form'],
+    [807, 'possession'],
+    [812, 'story'],
     [32, 'venue'],
     [37, 'venue'],
     [40, 'possession'],
@@ -73,7 +85,7 @@ describe('eventGroup', () => {
     [550, 'stats'],
     [601, 'result'],
     [604, 'result'],
-    [703, 'fanReaction'],
+    [703, 'managerQuote'],
     [804, 'form'],
     [811, 'headToHead'],
     [880, 'assist'],
@@ -102,7 +114,8 @@ describe('helpers', () => {
     expect(venueWeather(30)).toEqual({ weather: 'rain', venue: 'stadium' });
     expect(venueWeather(33)).toEqual({ weather: 'sunny', venue: 'stadium' });
     expect(venueWeather(36)).toEqual({ weather: 'rain', venue: 'neutral' });
-    expect(venueWeather(38)).toBeUndefined();
+    expect(venueWeather(38)).toEqual({ weather: 'fair', venue: 'neutral' });
+    expect(venueWeather(34)).toBeUndefined();
   });
 
   it('classifies cards and shoot-out kicks', () => {
@@ -110,10 +123,67 @@ describe('helpers', () => {
     expect(cardKind(511)).toBe('yellow');
     expect(cardKind(512)).toBe('secondYellow');
     expect(cardKind(514)).toBe('red');
-    expect(cardKind(513)).toBeUndefined();
+    expect(cardKind(513)).toBe('secondYellow');
+    expect(cardKind(515)).toBeUndefined();
+    expect(shootoutOutcome(55)).toBe('scored');
     expect(shootoutOutcome(56)).toBe('scored');
+    expect(shootoutOutcome(57)).toBe('scored');
     expect(shootoutOutcome(58)).toBe('missed');
     expect(shootoutOutcome(59)).toBe('missed');
     expect(shootoutOutcome(71)).toBeUndefined();
+  });
+});
+
+describe('chanceInfo', () => {
+  it('reads score context, situation and side from regular IDs', () => {
+    expect(chanceInfo(121)).toEqual({
+      goal: true,
+      context: 'lead',
+      situation: 'middle',
+      side: 'home',
+    });
+    expect(chanceInfo(103)).toEqual({
+      goal: true,
+      context: 'reducing',
+      situation: 'rightWing',
+      side: 'home',
+    });
+    expect(chanceInfo(162)).toEqual({
+      goal: true,
+      context: 'equalizer',
+      situation: 'leftWing',
+      side: 'away',
+    });
+    expect(chanceInfo(183)).toEqual({
+      goal: true,
+      context: 'increase',
+      situation: 'rightWing',
+      side: 'away',
+    });
+    expect(chanceInfo(234)).toEqual({
+      goal: false,
+      context: 'increase',
+      situation: 'penalty',
+      side: 'home',
+    });
+    expect(chanceInfo(280)).toEqual({
+      goal: false,
+      context: 'increase',
+      situation: 'freeKick',
+      side: 'away',
+    });
+  });
+
+  it('marks counter-attacks and special events, which carry no side', () => {
+    expect(chanceInfo(142)).toEqual({
+      goal: true,
+      counter: true,
+      special: true,
+      situation: 'leftWing',
+    });
+    expect(chanceInfo(219)).toEqual({ goal: false, special: true });
+    expect(chanceInfo(185)).toEqual({ goal: true, special: true });
+    expect(chanceInfo(290)).toEqual({ goal: false, special: true });
+    expect(chanceInfo(510)).toBeUndefined();
   });
 });
