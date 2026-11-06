@@ -60,8 +60,18 @@ export interface Beat {
 export type EventData =
   | { kind: 'formation'; side?: Side; formation: Formation }
   | { kind: 'formations'; home?: Formation; away?: Formation }
-  | { kind: 'weather'; weather: WeatherState; venue: 'stadium' | 'neutral' }
+  | {
+      kind: 'weather';
+      weather: WeatherState;
+      venue: 'stadium' | 'neutral';
+      /** 30-33: arena ID, sold seats and total seats. */
+      arenaId?: number;
+      spectators?: number;
+      capacity?: number;
+    }
   | { kind: 'attendance'; spectators: number }
+  | { kind: 'injuryWeeks'; weeks: number }
+  | { kind: 'organisation'; level: number }
   | { kind: 'addedTime'; minutes: number }
   | { kind: 'possession'; percent: number; side?: Side };
 
@@ -87,7 +97,10 @@ export type EventGroup =
   | 'formation'
   | 'derby'
   | 'neutralGround'
-  | 'managerAbsent'
+  | 'awayIsHome'
+  | 'walkover'
+  | 'teamNews'
+  | 'specialEvent'
   | 'venue'
   | 'attendance'
   | 'stakes'
