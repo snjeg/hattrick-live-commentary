@@ -4,3 +4,4 @@ export * from './picker';
 export * from './fill';
 export * from './templates';
 export * from './template-writer';
+export * from './talking-points';

@@ -203,7 +203,11 @@ export type ContextFactKind =
   | 'formation'
   | 'player'
   | 'stakes'
-  | 'story';
+  | 'story'
+  /** Score reminder, built from the running score when nothing else is fresh. */
+  | 'score'
+  /** Evergreen atmosphere filler, the last resort before silence. */
+  | 'atmosphere';
 
 /** A background fact the commentators can talk about between events. */
 export interface ContextFact {
