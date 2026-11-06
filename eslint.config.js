@@ -8,6 +8,14 @@ export default tseslint.config(
   ...tseslint.configs.strict,
   prettier,
   {
+    // Hard rule 9: Web Speech only inside its VoiceProvider adapter.
+    files: ['packages/**/*.ts'],
+    ignores: ['packages/audio/src/voice/web-speech.ts'],
+    rules: {
+      'no-restricted-globals': ['error', 'speechSynthesis', 'SpeechSynthesisUtterance'],
+    },
+  },
+  {
     // Hard rule 3: core stays pure (no network, browser, extension or audio APIs).
     files: ['packages/core/**/*.ts'],
     rules: {
@@ -19,6 +27,7 @@ export default tseslint.config(
         'chrome',
         'navigator',
         'speechSynthesis',
+        'SpeechSynthesisUtterance',
         'AudioContext',
         'XMLHttpRequest',
       ],
