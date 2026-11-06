@@ -50,6 +50,7 @@ pnpm --filter @hlc/core test       # one package (@hlc/core, data, audio, extens
 pnpm lint                          # ESLint (also enforces core purity)
 pnpm typecheck                     # tsc in every package
 pnpm format:check                  # Prettier (code and config; Markdown is excluded)
+pnpm --filter @hlc/extension build # unpacked extension in packages/extension/dist (Chrome: Load unpacked)
 pnpm tsx scripts/replay.ts <matchId> --speed 10   # print script for a fixture
 pnpm tsx scripts/capture-fixture.ts <matchId>     # save a finished match
 ```

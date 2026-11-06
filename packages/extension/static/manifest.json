@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Hattrick Live Commentary",
+  "short_name": "HT Commentary",
+  "version": "0.0.1",
+  "description": "Spoken two-commentator broadcast with crowd and weather atmosphere for Hattrick matches.",
+  "minimum_chrome_version": "116",
+  "action": {
+    "default_title": "Open Hattrick Live Commentary"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [],
+  "host_permissions": [],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
