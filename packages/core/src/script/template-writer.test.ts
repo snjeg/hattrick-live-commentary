@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { eventGroup } from '../model/event-types';
+import { classifyEventType } from '../model/event-types';
 import type { Beat, MatchEvent, Side, Team } from '../model/types';
 import { MOODS } from '../model/voice';
 import { fillTemplate, ordinal } from './fill';
@@ -28,7 +28,7 @@ function event(
     key: `${typeId}_1`,
     typeId,
     variant: 1,
-    group: eventGroup(typeId),
+    ...classifyEventType(typeId),
     beats: opts.beats ?? [],
     ...(opts.side ? { side: opts.side } : {}),
     ...(opts.subject ? { subjectPlayerId: opts.subject } : {}),

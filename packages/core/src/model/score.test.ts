@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { eventGroup } from './event-types';
+import { classifyEventType } from './event-types';
 import { runningScore, shootoutScore } from './score';
 import type { MatchEvent, MatchPart, Side } from './types';
 
@@ -11,7 +11,7 @@ function ev(typeId: number, side: Side | undefined, part: MatchPart = 1): MatchE
     key: `${typeId}_1`,
     typeId,
     variant: 1,
-    group: eventGroup(typeId),
+    ...classifyEventType(typeId),
     beats: [],
     ...(side ? { side } : {}),
   };

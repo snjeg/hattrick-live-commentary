@@ -86,7 +86,10 @@ async function broadcast(match: Match) {
 }
 
 describe('replayed broadcast (real fixture)', () => {
-  const [, cacio] = parseLive(realXml).matches as [Match, Match];
+  const [, cacio] = parseLive(realXml, { logUnknownKey: () => undefined }).matches as [
+    Match,
+    Match,
+  ];
 
   it('prints a full match script with no silence over the limit and one voice at a time', async () => {
     const { result, script } = await broadcast(cacio);

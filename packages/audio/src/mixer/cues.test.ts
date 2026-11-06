@@ -1,8 +1,8 @@
-import { eventGroup } from '@hlc/core';
+import { classifyEventType } from '@hlc/core';
 import { describe, expect, it } from 'vitest';
 import { crowdReaction } from './cues';
 
-const ev = (typeId: number) => ({ typeId, group: eventGroup(typeId) });
+const ev = (typeId: number) => ({ typeId, ...classifyEventType(typeId) });
 
 describe('crowd reactions', () => {
   it('roars for goals, gasps for misses and whistles for kick-off and the end', () => {

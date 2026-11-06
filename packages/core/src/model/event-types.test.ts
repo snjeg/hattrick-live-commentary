@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import {
   cardKind,
+  classifyEventType,
+  eventCategory,
+  isKnownEventType,
   chanceInfo,
   chanceSituation,
   eventGroup,
@@ -185,5 +188,42 @@ describe('chanceInfo', () => {
     expect(chanceInfo(185)).toEqual({ goal: true, special: true });
     expect(chanceInfo(290)).toEqual({ goal: false, special: true });
     expect(chanceInfo(510)).toBeUndefined();
+  });
+});
+
+describe('official event-type table', () => {
+  it('knows the documented IDs and nothing else', () => {
+    for (const id of [
+      19, 28, 30, 35, 47, 55, 76, 80, 97, 100, 143, 190, 200, 243, 290, 311, 344, 391, 427, 498,
+      505, 514, 596, 606, 651, 704, 822, 880,
+    ]) {
+      expect(isKnownEventType(id), String(id)).toBe(true);
+    }
+    for (const id of [
+      0, 18, 29, 34, 48, 77, 82, 98, 144, 149, 188, 189, 191, 238, 244, 291, 300, 312, 337, 345,
+      392, 428, 499, 506, 550, 595, 607, 705, 823, 881,
+    ]) {
+      expect(isKnownEventType(id), String(id)).toBe(false);
+    }
+  });
+
+  it('sorts every documented ID into goal, chance, card, info or context', () => {
+    expect([121, 162, 105, 141, 190, 55, 56, 57].map(eventCategory)).toEqual(Array(8).fill('goal'));
+    expect([221, 262, 205, 241, 290, 58, 59].map(eventCategory)).toEqual(Array(7).fill('chance'));
+    expect([510, 511, 512, 513, 514].map(eventCategory)).toEqual(Array(5).fill('card'));
+    expect(
+      [598, 597, 45, 599, 75, 70, 71, 401, 424, 454, 350, 332, 390, 40, 41, 61].map(eventCategory),
+    ).toEqual(Array(16).fill('info'));
+    expect(
+      [19, 20, 21, 25, 26, 27, 30, 33, 36, 464, 465, 703, 802, 811, 812, 460, 80].map(
+        eventCategory,
+      ),
+    ).toEqual(Array(17).fill('context'));
+  });
+
+  it('classifies in one call', () => {
+    expect(classifyEventType(121)).toEqual({ group: 'goal', category: 'goal', known: true });
+    expect(classifyEventType(550)).toEqual({ group: 'stats', category: 'info', known: false });
+    expect(classifyEventType(999)).toEqual({ group: 'unknown', category: 'info', known: false });
   });
 });

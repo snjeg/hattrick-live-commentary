@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createMatchClock } from '../clock/match-clock';
-import { eventGroup } from '../model/event-types';
+import { classifyEventType } from '../model/event-types';
 import { runningScore } from '../model/score';
 import type { MatchEvent, Side, Team } from '../model/types';
 import type { Line } from './line';
@@ -165,7 +165,7 @@ function ev(
     key: `${typeId}_1`,
     typeId,
     variant: 1,
-    group: eventGroup(typeId),
+    ...classifyEventType(typeId),
     beats: beats.map((text) => ({ text, mentions: [] })),
     ...(side ? { side } : {}),
     ...(side ? { subjectPlayerId: side === 'home' ? 11 : 21 } : {}),

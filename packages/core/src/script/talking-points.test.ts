@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { eventGroup } from '../model/event-types';
+import { classifyEventType } from '../model/event-types';
 import type { ContextFact, MatchEvent, MatchHeader, Team } from '../model/types';
 import { seededRandom } from './rng';
 import {
@@ -168,7 +168,7 @@ describe('fact extraction', () => {
     key: `${typeId}_1`,
     typeId,
     variant: 1,
-    group: eventGroup(typeId),
+    ...classifyEventType(typeId),
     beats: [],
     ...extra,
   });
