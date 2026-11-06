@@ -1,1 +1,1 @@
-export const packageName = '@hlc/core';
+export * from './model';
